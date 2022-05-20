@@ -32,8 +32,8 @@ begin
 	write(g,a[k]);
 end;
 begin
-Nhap;
-Tim;
-close(f);
-close(g);
+	Nhap;
+	Tim;
+	close(f);
+	close(g);
 end.
