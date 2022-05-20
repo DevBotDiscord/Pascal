@@ -43,6 +43,7 @@ end;
 begin 
 	nhap;
 	xuli;
+	
 	close(f);
 	close(g);
 end.
