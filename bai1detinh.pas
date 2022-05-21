@@ -23,6 +23,7 @@ begin
 writeln(o1,d);
 end;
 
+
 procedure caub;
 var i,s,du,t:longint;
 begin
