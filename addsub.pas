@@ -29,7 +29,7 @@ begin
 			begin
 				for d:=1 to j-1 do
 					s1:=s1+s[d];
-				for c:=j+1 to length(s) do
+				for c:=j+1 to length(s) d
 					s2:=s2+s[c];
 			end;
 		val(s1,t[1]);
