@@ -20,6 +20,7 @@ begin
         inc(l);
         readln(f,b[l]);
     end;
+    
 end;
 procedure tim;
 var i,j,d:longint;
