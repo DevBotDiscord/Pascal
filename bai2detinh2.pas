@@ -33,5 +33,5 @@ begin
 				inc(d);
 				c[d]:=a[i];
 			end;
-	for i:=1 to d write(g,c[i],' ');
+	 for i:=1 to d write(g,c[i],' ');
 end;
