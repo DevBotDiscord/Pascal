@@ -24,6 +24,7 @@ begin
 	for i:=1 to n div 2 do
 	begin
 	if ngto(i)=true then
+	
 	begin
 		t:=n-i;
 		if ngto(t)=true then
