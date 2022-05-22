@@ -33,8 +33,8 @@ begin
 end;
 end;
 begin
-nhap;
-kiemtra;
-close(f);
-close(g);
+	nhap;
+	kiemtra;
+	close(f);
+	close(g);
 end.
