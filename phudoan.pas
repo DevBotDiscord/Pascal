@@ -2,7 +2,8 @@ const
     mn=2002; 
     bl=#32;
     nl=#13#10;
-  	fn='bai1.inp'; gn = 'doan.out';
+  	fi='bai1.inp';
+  	fo = 'doan.out';
 type
   KieuDoan = record
 			   a,b: integer;
