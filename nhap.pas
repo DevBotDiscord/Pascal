@@ -28,7 +28,7 @@ begin
   t := 0;
   a := c[1].x; b := a + c[1].d; { Khoi tri lan }
   for i := 2 to n do
-    if (c[i].x <= b) then b := max(b,c[i].x + c[i].d)
+    if (c[i].x <= b) then b :=  max(b,c[i].x + c[i].d)
      else
      begin
        t := t + (b - a);
