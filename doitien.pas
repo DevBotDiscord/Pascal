@@ -18,6 +18,7 @@ procedure kiemtra;
 var t,dem,i,t1,t2,tong:longint;
 begin
 t:=n*23000;
+
 for i:=1 to m do
 begin
 if t div a[i]<>0 then begin
