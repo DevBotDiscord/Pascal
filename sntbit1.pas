@@ -5,5 +5,16 @@ var f,g:text;
 procedure nhap;
 begin
 	assign(f,fi);reset(f);
-end
+	assign(g,fo);rewrite(g);
+	read(f,n); read(f,h);
+	writeln(n);
+	writeln(h); 
+end;
+procedure xuli;
+var i,n
+begin 
+nhap;
+close(f);
+close(g);
+end.
 	
