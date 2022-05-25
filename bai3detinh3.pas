@@ -10,7 +10,7 @@ begin
   F[2]:=1;
   K:=2;
   while (F[K]<=M) do
-  begin
+  begi
      K:=K+1;
      F[K]:=F[K-2]+F[K-1];
   end;
@@ -30,7 +30,7 @@ end;
 procedure nhap;
 begin
   assign(f1,fi);reset(f1);
-  assign(g,fo);rewrite(g);
+  assign(g,fo);rewrite(g)
   readln(f1,n);
 end;
 
