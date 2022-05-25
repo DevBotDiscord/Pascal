@@ -10,6 +10,7 @@ begin
 	writeln(n);
 	writeln(h); 
 end;
+
 procedure xuli;
 var i,n
 begin 
