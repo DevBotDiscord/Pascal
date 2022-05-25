@@ -10,7 +10,7 @@ assign(f,fi);
 reset(F);
 assign(g,fo);
 rewrite(g);
-read(f,n,m);
+read(f,n,m);	
 for i:=1 to m do
 read(f,a[i]);
 end;
