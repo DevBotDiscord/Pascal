@@ -27,7 +27,6 @@ begin
   else write(g,'0');
 end;
 
-procedure nhap;
 begin
   assign(f1,fi);reset(f1);
   assign(g,fo);rewrite(g)
