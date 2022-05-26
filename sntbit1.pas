@@ -11,8 +11,14 @@ begin
 	writeln(h); 
 end;
 
+
+
+
 procedure xuli;
-var i,n
+var i,l:longint;
+begin
+for i:=1 to n do  
+end;
 begin 
 nhap;
 close(f);
