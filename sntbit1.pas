@@ -11,9 +11,6 @@ begin
 	writeln(h); 
 end;
 
-
-
-
 procedure xuli;
 var i,l:longint;
 begin
