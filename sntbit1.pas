@@ -6,9 +6,7 @@ procedure nhap;
 begin
 	assign(f,fi);reset(f);
 	assign(g,fo);rewrite(g);
-	read(f,n); read(f,h);
-	writeln(n);
-	writeln(h); 
+	read(f,n); read(f,h); 
 end;
 
 procedure xuli;
