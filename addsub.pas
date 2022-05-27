@@ -22,7 +22,7 @@ begin
 	for i:=1 to n do
 	begin
 		s1:='';
-		s2:='';
+		s2	:='';
 		s:=A[i];
 		for j:=1 to length(s) do
 			if (s[j]='+') or (s[j]='-') then

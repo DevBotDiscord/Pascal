@@ -30,7 +30,7 @@ end;
 begin
 	assign(f1,fi);reset(f1);
 	assign(g,fo);rewrite(g)
-	readln(f1,n);
+	readln(fi,n);
 end;
 
 begin
