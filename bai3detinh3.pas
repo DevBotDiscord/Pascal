@@ -1,8 +1,8 @@
 const fi='bai3.inp';
 			fo='bai3.out';
 var A,F:array[0..2*100000]of Qword;
-		N,K:longint;
-		f1,g:text;
+	N,K:longint;
+	f1,g:text;
 
 procedure taodayfibo(M:longint)
 begin
