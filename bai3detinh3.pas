@@ -18,11 +18,11 @@ begin
 
 procedure xuLi;
 Var i,j:longint;
-begin
+begin 
 	j:=0;
 	for i:=k downto 1 do
 	if F[i]<=N then begin inc(j);A[j]:=F[i];
- N:=N-F[i];end;
+ 	N:=N-F[i];end;
 	if N=0 then for i:=1 to j do write(g,A[i],' ')
 	else write(g,'0');
 end;
