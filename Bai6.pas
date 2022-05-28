@@ -50,4 +50,4 @@ begin
 	kt;
 	close(f);
 	close(g);
-end
+end.
