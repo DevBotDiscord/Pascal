@@ -35,3 +35,9 @@ begin
 			end;
 	 for i:=1 to d write(g,c[i],' ');
 end;
+begin 
+nhap;
+tim;
+close(f);
+close(g);
+end;
