@@ -20,7 +20,7 @@ begin
 	for i:=1 to n do 
 		for j:=1 to n do 
 		begin 
-			k:=a[i,j];
+			k:=a[i,j];	
 			a[i,j]:=a[i,j+n];
 			a[i,j+n]:=k;
 		end;
