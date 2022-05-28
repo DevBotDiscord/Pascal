@@ -13,7 +13,7 @@ begin
 	begin
 		inc(k);
 		readln(f,a[k]);
-	end;
+	end
 	l:=0;
 	while not eof(f) do
 	begin
