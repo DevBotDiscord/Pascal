@@ -9,7 +9,7 @@ var i,j:longint;
 begin
 	assign(f,fi);reset(f);
 	assign(g,fo);rewrite(g);
-	readln(f,n);
+	readln(f,n);	
 	for i:=1 to 2*n do
 		for j:=1 to 2*n do 
 			read(f,a[i,j]);
