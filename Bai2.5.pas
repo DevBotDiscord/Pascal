@@ -35,32 +35,32 @@ begin
     dec(i);
     end;
     end;
-    procedure ktxuoi;
-    var i:longint;
-    begin
-    t:=0;
-    v:=0;
-    i:=1;
-    while i<=length(s) do
-    begin
+procedure ktxuoi;
+var i:longint;
+begin
+t:=0;
+v:=0;
+i:=1;
+while i<=length(s) do
+begin
     case s[i] of
-    '(':inc(t);
-    ')':dec(t);
-    '[':inc(v);
-    ']':dec(v);
+        '(':inc(t);
+        ')':dec(t);
+        '[':inc(v);
+        ']':dec(v);
     end;
     if t<0 then
     begin
-    insert('(',s,i);
-    inc(i);
-    t:=0;
+        insert('(',s,i);
+        inc(i);
+        t:=0;
     end;
     if v<0 then
     begin
-    insert('[',s,i);
-    inc(i);
-    v:=0;
-    end;
+        insert('[',s,i);
+        inc(i);
+        v:=0;
+        end;
     inc(i);
     end;
     if (t>0) or (v>0) then ktnguoc;
