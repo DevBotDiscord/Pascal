@@ -28,8 +28,8 @@ begin
 		if a[i,j]>max then max:=a[i,j];
 		if a[i,j]<min then min:=a[i,j];
 	end;
-	maxcot[j]:= max ;
-	mincot[j]:=min;
+		maxcot[j]:= max ;
+		mincot[j]:=min;
 	end;
 	for i:=1 to m do
 	begin
