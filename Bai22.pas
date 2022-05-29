@@ -1,34 +1,47 @@
-const
-	fi = 'input23.inp';
-	fo = 'output33.out';
-var f,g:text;
-	a,b,c:Longint;
-	m:array[1..100] of longint;
-procedure nhap;
+program sap_xep_so_trong_xau;
+uses crt;
+var s,tg: string;
+    a: array[1..100] of string;
+    b: array[1..100] of integer;
+    so, kt, i, j, n, so1:integer;
 begin
-assign(f,fi);reset(f);
-assign(g,fo);rewrite(g);
-readln(f,a,b,c);
-end;
-procedure tim;
-var i,s:longint;
-begin
-	s:=0;
-	for i:=1 to 12 do 
-	case i of
-	1,3,5,8,10,12 : m[i]:=31;
-	4,6,11 :m[i]:=30;
-	2:if (c mod 400=0) or ((c mod 4=0)) and (c mod 100<>0)
-	then m[i]:=29 else m[i]:=28;
-	end;
-	for i:=1 to b-1 do 
-	s:=s+m[i];
-	s:=s+a;
-	writeln(g,s);
-end;
-begin
-	nhap;
-	tim;
-	close(f);
-	close(g);
+     clrscr;
+     write('Nhap xau: '); readln(s);
+     i:=1;
+     j:=1;
+     while i<=length(s) do
+     begin
+          val(s[i], so, kt);
+          if kt = 0 then
+          begin
+               b[j]:=i;
+               while (kt=0) and (i<=length(s)) do
+               begin
+                    a[j]:=a[j]+s[i];
+                    delete(s,i,1);
+                    val(s[i],so, kt);
+               end;
+               j:=j+1;
+          end;
+          i:=i+1;
+     end;
+     n:=j-1;
+     {sap xep mang xau-so}
+     for i:=1 to n-1 do
+     for j:=i+1 to n do
+     begin
+          val(a[i],so,kt);
+          val(a[j],so1,kt);
+          if so > so1 then
+          begin
+               tg:=a[i];
+               a[i]:=a[j];
+               a[j]:=tg;
+          end;
+     end;
+     {Chen mang so da sx vao xau}
+    for i:=n downto 1 do insert(a[i],s,b[i]);
+    writeln;
+    write('xau da sx: ',s);
+readln;
 end.
