@@ -9,7 +9,7 @@
   </a>
 </p>
 
-> Bai lam cua co hoa
+> Pascal Chuyên LVC 
 
 ### 🏠 [Homepage](https://github.com/DevBotDiscord/Pascal)
 
