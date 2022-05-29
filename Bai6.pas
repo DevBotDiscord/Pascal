@@ -1,6 +1,6 @@
 const
-	fi = 'input22.inp';
-	fo = 'output22.out';
+	fi = 'bai1.inp';
+	fo = 'bai1.out';
 var f,g:text;
 	n:Longint;
 	a:array[1..100,1..100] of longint;
