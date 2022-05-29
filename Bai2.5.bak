@@ -1,4 +1,4 @@
-const fi='bai2.inp';
+const fi='bai1.inp';
       fo='bai2.out';
 var t,v:longint; s:string;
     f,g:text;
