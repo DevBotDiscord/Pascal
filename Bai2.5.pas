@@ -42,7 +42,7 @@ begin
 			s1 := ' lam'
 			else s1 := ' nam';
 		end;
-		'6': s1:=' sau';
+		'6': s1:=' sau'; 
 		'7': s1:=' bay';
 		'8': s1:=' tam';
 		'9': s1 := ' chin';
