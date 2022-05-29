@@ -38,8 +38,7 @@ begin
                a[i]:=a[j];
                a[j]:=tg;
           end;
-     end;
-    for i:=n downto 1 do insert(a[i],s,b[i]);
+     end;    for i:=n downto 1 do insert(a[i],s,b[i]);
     writeln;
     write('xau da sx: ',s);
 readln;
