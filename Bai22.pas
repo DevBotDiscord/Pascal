@@ -39,7 +39,6 @@ begin
                a[j]:=tg;
           end;
      end;
-     {Chen mang so da sx vao xau}
     for i:=n downto 1 do insert(a[i],s,b[i]);
     writeln;
     write('xau da sx: ',s);
