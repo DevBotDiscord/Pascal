@@ -44,4 +44,4 @@ begin
     writeln;
     write('xau da sx: ',s);
 readln;
-end.
+end
