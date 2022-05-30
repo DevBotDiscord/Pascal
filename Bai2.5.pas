@@ -34,9 +34,8 @@ begin
     end;
     dec(i);
     end;
-    end;
 procedure ktxuoi;
-var i:longint;
+var i:longint
 begin
 t:=0;
 v:=0;
