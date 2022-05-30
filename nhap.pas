@@ -3,15 +3,12 @@ var a:array[1..100] of integer;
 i,j,n,t:integer;
 begin
 clrscr;
-{--- nhap mang a ---}
 write('nhap so pt cua a : ');readln(n);
 write('nhap day a : ');
 for i:=1 to n do readln(a[i]);
-{--- nhap mang b noi vao mang a ---}
 write('nhap so pt cua b : ');readln(n);
 write('nhap day b : ');
 for j:=i+1 to i+n do readln(a[j]);
-{--- sap xep lai mang ---}
 n:=j;
 for i:=1 to n-1 do
 for j:=i+1 to n do
