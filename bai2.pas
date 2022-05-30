@@ -1,30 +1,25 @@
-const fi='bai2,inp';
-	  fo='bai2.out';
-var f,g:text;
-    n,d:longint;
-    a:array[0..1000]of longint;
-    s:array[1..1000]of char;
+const fi='bai2.inp';
+      fo='bai2.out';
+var n,d:longint;
+    s:string; f,g:text;
 procedure nhap;
-var i:longint;
+
+var i,t,kq,s1:longint;
 begin
-    assign(f,fi);reset(f);
-    assign(g,fo);rewrite(g);
-    readln(f,n,d);
-    for i:=1 to n do
-        readln(f,s[i],a[i]);
+s1:=0;
+assign(f,fi);reset(f);
+assign(g,fo);rewrite(g);
+readln(f,n,d);
+for i:=1 to n do
+begin
+readln(f,s);
+val(s[3],t,kq);
+s1:=s1+t;
 end;
-procedure tim;
-var i,j,t:longint;
-    test:boolean;
-begin
-    t:=0;
-    for i:=1 to n do
-        t:=t+a[i];
-    writeln(g,d*t);
+write(g,d*s1);
 end;
 begin
-    nhap;
-    tim;
-    close(f);
-    close(g);
+nhap;
+close(f);
+close(g);
 end.
