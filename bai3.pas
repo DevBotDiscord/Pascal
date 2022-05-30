@@ -1,3 +1,5 @@
+const fi='bai3.inp';
+	  fo='bai3.out';
 var s: string;
 	j:byte;
 function mahoa(a:char): char;
