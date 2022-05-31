@@ -1,32 +1,44 @@
 const fi='bai3.inp';
-	  fo='bai3.out';
-var s: string;
-	j:byte;
-function mahoa(a:char): char;
-		var t: array[0..25] of char;
-			ch: char;
-			x,i: byte;
-		begin
-				i:=0;
-				for ch:='a' to 'z' do
-						begin
-						t[i]:=ch;
-						inc(i);
-						end;
-				for i:=0 to 25 do
-						if t[i]=a then
-								begin
-								x:=i;
-								break;
-								end;
-				i:=(x+5) mod 26;
-				mahoa:= t[i];
-		end;
+fo='bai3.out';
+var f,g:Text;
+s:string;
+procedure nhap;
 begin
-		write(' Nhap xau can ma hoa: ');
-		readln(s);
-		writeln(' Xau ma hoa la:');
-		for j:=1 to length(s) do
-				write(mahoa(s[j]));
-		readln
+	assign(f,fi);
+	reset(F);
+	assign(g,fo);
+	rewrite(G);
+	readln(f,s);
+end;
+procedure kiemtra;
+var k,i,n,kq,t,t1:longint;
+begin
+	t:=0;
+	for i:=1 to length(S) do
+	begin
+	if s[i]<>'?' then
+	begin
+	val(s[i],n,kq);
+	t:=t+i*n;
+	end
+	else
+	k:=i;
+	end;
+	t1:=t;
+	for i:=0 to 9 do
+	begin
+	t:=t1;
+	t:=t+k*i;
+	if t mod 11=0 then
+	begin
+	write(g,i);
+	break;
+	end;
+	end;
+end;
+begin
+nhap;
+kiemtra;
+close(f);
+close(G);
 end.
