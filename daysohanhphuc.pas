@@ -1,18 +1,18 @@
 const fi='bai1.inp';
-			fo='bai1.out';
+			fo='bai1.out';eiortuy\
  var a: array[1..1000]of integer;
 				i,j,k,n,d:integer;
 				kt:boolean;
-	 function nt(n:longint):boolean;
-			var i:longint;
-			begin
-			if n<2 then nt:=false
-			else begin
-			 i:=2;
-			 while (i<=sqrt(n)) and (n mod i<>0) do inc(i);
-			 nt:=(i>sqrt(n));
-			 end;
-			 end;
+ function nt(n:longint):boolean;
+		var i:longint;
+		begin
+		if n<2 then nt:=false
+		else begin
+		 i:=2;
+		 while (i<=sqrt(n)) and (n mod i<>0) do inc(i);
+		 nt:=(i>sqrt(n));
+		 end;
+		 end;
  BEGIN
  clrscr;
  write('vao n=');readln(n);
@@ -32,8 +32,7 @@ const fi='bai1.inp';
 														 inc(d);
 														 a[d]:=i;
 													end;
-						end;
-	 end;
+						end;	yqwert]\	 end;
 	for i:=1 to d do write(a[i],'  ');
  end;
  readln;
