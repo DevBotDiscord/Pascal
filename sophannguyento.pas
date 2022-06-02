@@ -1,61 +1,46 @@
-const fi='bai3.inp';
-fo='bai3.out';
-var f,g:text;
-n:longint;
-a:array[1..4000,1..4000] of longint;
-procedure nhap;
+program sophannguyento ;
+const fi='bai4.inp';
+      fo='bai4.out';
+var k:longint;
+    f,g:text;
+procedure input ;
 begin
-assign(f,fi);
-reset(f);
-assign(g,fo);
-rewrite(g);
-readln(g);
+ assign(f,fi);
+ reset(f);
+ assign(g,fo);
+ rewrite(g);
+ readln(f,k);
 end;
-procedure kiemtra;
-var i,j,k,trai,phai,tren,duoi:longint;
+function ktuoc(n:longint):longint;
+var d,i:longint;
 begin
-trai:=1;
-hai:=n;
-duoi:=n;
-tren:=1;
-k:=0;
-while k<sqr(n) do
-begin
-for i:= trai to phai do
-begin
-inc(k);
-A[tren,i]:=k;
+d:=0;
+ for i:=1 to n do
+  if n mod i = 0 then inc(d);
+ exit(d) ;
 end;
-inc(tren);
-for i:= tren to duoi do
+function kt(n : longint) : boolean ;
+var i : longint ;
 begin
-inc(k);
-A[i,phai]:=k;
-end;
-dec(phai);
-for i:= phai downto trai do
+ for i := 1 to n do
+  if ktuoc(n) < ktuoc(i) then
+   exit(false) ;
+  exit(true);
+end ;
+procedure output;
+var max,i,t:longint;
 begin
-inc(k);
-A[duoi,i]:=k;
-end;
-dec(duoi);
-for i:= duoi downto tren do
-begin
-inc(k);
-A[i,trai]:=k;
-end;
-inc(trai);
-end;
-for i:=1 to n do
-begin
-for j:=1 to n do
-write(g,a[i,j]);
-writeln(fo);
-end;
+max:=-maxlongint;
+ for i:= k downto 1 do
+  if kt(i) = true then
+   begin
+    writeln(g,i);
+    break ;
+   end ;
 end;
 begin
-nhap;
-kiemtra;
+ input;
+ output;
 close(f);
 close(g);
 end.
