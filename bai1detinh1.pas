@@ -1,5 +1,5 @@
 const fi='bai1.inp';
-	fo='bai1.out';
+      fo='bai1.out';
 var f,g:text;
     a:array['0'..'9']of longint;
     b:array['A'..'Z']of longint;

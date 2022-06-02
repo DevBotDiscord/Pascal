@@ -1,20 +1,20 @@
-const fi='happy.inp';
-      fo='happy.out';
+const fi='bai1.inp';
+	  fo='bai1.out';
 var n:longint;
-    a:array[1..100] of longint;  f,g:text;
+	a:array[1..100] of longint;  f,g:text;
 procedure nhap;
 begin
-assign(f,fi);reset(F);
-assign(g,fo);rewrite(G);
-readln(f,n);
+	assign(f,fi);reset(F);
+	assign(g,fo);rewrite(G);
+	readln(f,n);
 end;
 function kt(n:longint):boolean;
 var i:longint;
 begin
-if n<2 then exit(false);
-for i:=2 to trunc(sqrt(n)) do
-if n mod i = 0 then exit(false);
-exit(true);
+	if n<2 then exit(false);
+	for i:=2 to trunc(sqrt(n)) do
+	if n mod i = 0 then exit(false);
+	exit(true);
 end;
 {function kt1(n:longint):boolean;
 var i,t:longint;
@@ -34,7 +34,8 @@ if kt(i)=true then
 begin
 inc(d);
 a[d]:=i;
-end                                                                              else
+end   
+else
 begin
 ok:=false;
 for j:=1 to d-1 do
