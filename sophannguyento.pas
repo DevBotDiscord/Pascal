@@ -15,7 +15,7 @@ procedure kiemtra;
 var i,j,k,trai,phai,tren,duoi:longint;
 begin
 trai:=1;
-phai:=n;
+hai:=n;
 duoi:=n;
 tren:=1;
 k:=0;

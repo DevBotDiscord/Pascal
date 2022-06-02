@@ -23,8 +23,7 @@ var j:longint;
 begin 
     assign(f,fi);reset(f);
     assign(g,fo);rewrite(g);
-    readln(f,n);
-    for j:=1 to n do 
+    while not eof(f) do 
     begin 
     read(f,n1,n2);
     main();
