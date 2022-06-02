@@ -1,4 +1,3 @@
-program sophannguyento ;
 const fi='bai4.inp';
       fo='bai4.out';
 var k:longint;
