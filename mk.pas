@@ -9,8 +9,23 @@ procedure nhap;
 		readln(f,n,k);		
 	end;
 procedure tim;
-	var i,d:longint;
+	var s,i,d:longint;
 begin
+	s:=0;
+	d:=0;
 	for i:=n downto 1 do 
-
-end
+		begin
+			s:=s+i;
+			
+			if d = k then begin
+				inc(d);
+			  break;
+			  end;
+		end;
+		write(g,s);
+end;
+begin
+	nhap;
+	tim;
+	close(f);
+	close(g);end.
