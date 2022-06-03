@@ -34,6 +34,6 @@ Begin
      End;
      End;
      Gotoxy(1,4);
-     Writeln('Da duyet xong');
+     Writeln('Da duyet xong')
      Readln
 End.
