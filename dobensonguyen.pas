@@ -1,5 +1,5 @@
-const fi='bai5kiemtra2.inp';
-      fo='bai5kiemtra2.out';
+const fi='doben.inp';
+      fo='doben.out';
 var n:longint;
     f,g:text;
 procedure nhap;
