@@ -12,7 +12,7 @@ Begin
      TICH:=Tam;
 End;
 Begin
-     clrscr 
+     clrscr;
      Write('Nhap n:');Readln(n);
      Max:=0;
      For i:=1 to n do
@@ -34,6 +34,6 @@ Begin
      End;
      End;
      Gotoxy(1,4);
-     Writeln('Da duyet xong')
+     Writeln('Da duyet xong');
      Readln
 End.
