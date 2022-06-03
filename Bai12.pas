@@ -23,4 +23,4 @@ nhap;
 tim;
 close(f);
 close(g);
-updaend.
+end.
