@@ -1,4 +1,3 @@
-uses crt;
 Var n,d,i,j,max:longint;
 Function TICH(n:Longint):Longint;
 Var tam:integer;
