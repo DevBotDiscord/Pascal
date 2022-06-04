@@ -1,7 +1,7 @@
 const fi='bai1.inp';
-      fo='bai1.out';
-     var n,k:longint;
-           f,g:text;
+	  fo='bai1.out';
+var n,k:longint;
+	f,g:text;
 procedure nhap;
 	begin
 		assign(f,fi);reset(f);
