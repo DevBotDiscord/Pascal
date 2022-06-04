@@ -41,7 +41,3 @@ begin
     close(f);
     close(g);
 end.
-
-
-
-
