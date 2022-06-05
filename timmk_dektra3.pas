@@ -1,12 +1,14 @@
+const fi='mk.inp';
+      fo='mk.out';
 var f,g:text;
     n:longint;
     s:string;
-    a:array[0..1000]of longint;
+    a:array[0..7200]of longint;
 procedure nhap;
 var i:longint;
 begin
-    assign(f,'INPUT.inp');reset(f);
-    assign(g,'OUTPUT.out');rewrite(g);
+    assign(f,fi);reset(f);
+    assign(g,fo);rewrite(g);
     readln(f,s);
 end;
 function snt(a:longint):boolean;
@@ -19,17 +21,17 @@ begin
 end;
 procedure tim;
 var i,j,d,max,t2:longint;
-    t,t1:string;
+    l,t1:string;
     test:boolean;
 begin
-    t:='';
+    l:=' ';
     max:=-maxlongint;
     for i:=1 to length(s) do
-        if s[i] in ['0'..'9'] then t:=t+s[i];
-    for i:=1 to length(t)-1 do
-        for j:=i+1 to length(t) do
+        if s[i] in ['0'..'9'] then l:=l+s[i];
+    for i:=1 to length(l)-1 do
+        for j:=i+1 to length(l) do
         begin
-            t1:=copy(t,i,j-i+1);
+            t1:=copy(l,i,j-i+1);
             val(t1,t2);
             if (snt(t2)) and (t2>max) then max:=t2;
         end;
