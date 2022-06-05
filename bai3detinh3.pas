@@ -1,5 +1,5 @@
 const fi='bai3.inp';
-			fo='bai3.out';
+      fo='bai3.out';
 var A,F:array[0..2*100000]of Qword;
 	N,K:longint;
 	f1,g:text;
@@ -26,7 +26,7 @@ begin
 	if N=0 then for i:=1 to j do write(g,A[i],' ')
 		else write(g,'0');
 end;
-
+procedure nhap;
 begin
 	assign(f1,fi);reset(f1);
 	assign(g,fo);rewrite(g)
