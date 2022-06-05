@@ -1,11 +1,13 @@
+const fi='tongdcheo.inp';
+      fo='tongdcheo.out';
 var f,g:text;
     n:longint;
     a:array[0..1000,0..1000]of longint;
 procedure nhap;
 var i,j:longint;
 begin
-    assign(f,'INPUT.inp');reset(f);
-    assign(g,'OUTPUT.out');rewrite(g);
+    assign(f,fi);reset(f);
+    assign(g,fo);rewrite(g);
     readln(f,n);
     for i:=1 to n do
     begin
@@ -51,8 +53,3 @@ begin
     close(f);
     close(g);
 end.
-
-
-
-
-
