@@ -1,70 +1,51 @@
-const fi='bitland.inp';
-      fo='bitland.out';
-var f,g:text;
-    n:longint;
-    a:array[0..1000,0..1000]of longint;
-procedure nhap;
-var i,j:longint;
+const fi = 'bitland.inp' ;
+      fo = 'bitland.out' ;
+var a : array[1..1000,1..1000] of longint ;
+    f, g : text ;
+    n : longint ;
+function tong(u,v,x,y : longint) : longint ;
+var t,i,j : longint ;
 begin
-    assign(f,fi);reset(f);
-    assign(g,fo);rewrite(g);
-    readln(f,n);
-    for i:=1 to n do
-    begin
-        for j:=1 to n do
-            read(f,a[i,j]);
-        readln(f);
-    end;
-end;
-funtion tong(x,y,u,v:longint):longint;
-var
+t := 0 ;
+ for i := u to x do
+  for j := v to y do
+   t := t + a[i,j] ;
+ exit(t);
+end ;
+function kt(u,v,x,y : longint) : boolean ;
+var i,j : longint ;
 begin
-    t:0;
-    for i:=x to u do 
-        for j:=y to v do 
-        t:=t+a[i,j];
-    tong:=t;
-end;
-
-procedure tim;
-var i,j,d,max,k,l:longint;
-    test,test1:boolean;
+ for i := u to x do
+  for j := v to y do
+   if a[i,j] < 0  then exit(false) ;
+  exit(true);
+end ;
+procedure input ;
+var i,j : longint ;
 begin
-    max:=-maxlongint;
-    test1:=false;
-    for i:=1 to n-2 do
-        for j:=1 to n-2 do
-        begin
-            d:=0;
-            for k:=i to i+2 do
-            begin
-                test:=true;
-                for l:=j to j+2 do
-                    if a[k,l]>0 then d:=d+a[k,l]
-                    else
-                    begin
-                        test:=false;
-                        break;
-                    end;
-                if test=false then break;
-            end;
-            if (d>max) and (test=true) then
-            begin
-                max:=d;
-                test1:=true;
-            end;
-        end;
-    if test1=true then writeln(g,max)
-    else writeln(g,'-1');
-end;
+ assign(f,fi);
+ reset(f);
+ assign(g,fo);
+ rewrite(g);
+ readln(f,n);
+ for i := 1 to n do
+  for j := 1 to n do
+   read(f,a[i,j]) ;
+end ;
+procedure output ;
+var i,j,max,ss: longint ;
 begin
-    nhap;
-    tim;
-    close(f);
-    close(g);
-end.
-
-
-
-
-
+max := -maxlongint ;
+ for i := 1 to n - 2 do
+  for j := 1 to n - 2 do
+   if kt(i,j,i+2,j+2) = true then
+    if max < tong(i,j,i+2,j+2) then
+      max := tong(i,j,i+2,j+2) ;
+ if max = -maxlongint then write(g,'-1') else
+   writeln(g,max) ;
+end ;
+begin
+ input ;
+ output ;
+close(f);
+close(g)
