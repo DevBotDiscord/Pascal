@@ -1,11 +1,13 @@
+const fi='bitland.inp';
+      fo='bitland.out';
 var f,g:text;
     n:longint;
     a:array[0..1000,0..1000]of longint;
 procedure nhap;
 var i,j:longint;
 begin
-    assign(f,'INPUT.inp');reset(f);
-    assign(g,'OUTPUT.out');rewrite(g);
+    assign(f,fi);reset(f);
+    assign(g,fo);rewrite(g);
     readln(f,n);
     for i:=1 to n do
     begin
@@ -14,6 +16,16 @@ begin
         readln(f);
     end;
 end;
+funtion tong(x,y,u,v:longint):longint;
+var
+begin
+    t:0;
+    for i:=x to u do 
+        for j:=y to v do 
+        t:=t+a[i,j];
+    tong:=t;
+end;
+
 procedure tim;
 var i,j,d,max,k,l:longint;
     test,test1:boolean;
