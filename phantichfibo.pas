@@ -40,15 +40,15 @@ Begin
       If t<>0 then ok:=false;
       
       If ok=true then
-      begin 
-      	write(g,n,'=');
+      // begin 
+      	// write(g,n,'=');
             for i:= 1 to j do
               begin
               If i <> j then
               write(g, fibo[vt[i]], '+') else
               write(g, fibo[vt[i]])
               end
-      end
+      //end
               else write(g, 'Khong the bieu dien ');
 
 end;
