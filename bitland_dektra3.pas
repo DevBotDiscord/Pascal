@@ -7,7 +7,7 @@ function tong(u,v,x,y : longint) : longint ;
 var t,i,j : longint ;
 begin
 t := 0 ;
- for i := u to x do
+for i := u to x do
   for j := v to y do
    t := t + a[i,j] ;
  exit(t);
