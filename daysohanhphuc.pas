@@ -1,7 +1,8 @@
 const fi='bai1.inp';
 	  fo='bai1.out';
-var n:longint;
-	a:array[1..100] of longint;  f,g:text;
+var f,g:text;
+	n:longint;
+	a:array[1..1505]of longint;
 procedure nhap;
 begin
 	assign(f,fi);reset(F);
@@ -15,14 +16,14 @@ begin
 	for i:=2 to trunc(sqrt(n)) do
 	if n mod i = 0 then exit(false);
 	exit(true);
-end;
-{function kt1(n:longint):boolean;
-var i,t:longint;
-begin
-if n mod i = 0 then inc(t);
-if t>0 then exit(true);
-exit(false);
-end;    }
+// end;
+// function kt1(n:longint):boolean;
+// var i,t:longint;
+// begin
+// if n mod i = 0 then inc(t);
+// if t>0 then exit(true);
+// exit(false);
+// end;    
 procedure tim;
 var i,j,t,d:longint; ok:boolean;
 begin
