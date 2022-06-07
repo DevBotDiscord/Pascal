@@ -7,7 +7,7 @@ var i:longint;
 begin
 assign(f,fi);reset(f);
 assign(g,fo);rewrite(g);
-readln(f,n,k);
+readln(f,n);
 for i:=1 to n do
 read(f,a[i]);
 end;
