@@ -38,11 +38,12 @@ begin
         d:=0;
         i1:=i;
         j1:=1;
-        repeat
+        while (j1>n) or (i1>n) do 
+        begin 
             d:=d+a[i1,j1];
             inc(i1);
             inc(j1);
-        until (j1>n) or (i1>n);
+        end;
         if d>max then max:=d;
     end;
     writeln(g,max);
