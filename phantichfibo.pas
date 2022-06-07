@@ -46,7 +46,7 @@ Begin
 					  write(g, fibo[vt[i]])
 					  end
 		end
-					  else write(g, 'Khong the bieu dien ');
+	else write(g, 'Khong the bieu dien ');
 end;
 Begin
 	nhap;
