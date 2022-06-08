@@ -1,4 +1,4 @@
-uses crt;
+const fi='ktnhiunhat.inp'
 var f,g:text;
     n:longint;
     s:string;

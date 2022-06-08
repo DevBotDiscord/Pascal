@@ -1,32 +1,39 @@
-program Ships;
-{$B-}
-uses crt;
-const MN = 250;
-boong = '1'; nuoc = '0';
-Function Dem(fn: string):
-integer;
-var
-f: text; d,i: integer;
-x,y: string;{x:dong tren, y:dong duoi }
+const   fi = 'demtau.inp' ;
+        fo = 'demtau.out' ;
+var f ,g : text ;
+    a : array[1..1000,1..1000] of char ;
+    s : string ;
+    n,m : longint ;
+procedure nhap ;
+var  j : longint;
 begin
-Dem := 0; assign(f,fn);
-{$I-} reset(f); {$I+}
- if IORESULT <> 0 then exit;
-x := nuoc;
- for i := 1 to 8 do x:= x+x; {x = ‟00...0‟}
-d := 0;
-while NOT EOF(f) do
+m := 0 ;
+ fillchar(a,sizeof(a),'0');
+ assign(f,fi);
+ reset(f);
+ assign(g,fo);
+ rewrite(g);
+ while not EOF(f) do
+  begin
+   readln(f,s);
+   inc(m) ;
+   for j := 1 to length(s) do
+    a[m,j] := s[j] ;
+  end ;
+ n := length(s);
+end ;
+procedure xuli ;
+var i, j,dem : longint ;
 begin
-readln(f,y);
-if (y[1]=boong)AND(x[1]=nuoc) then d:=d+1;
-for i:=2 to length(y) do
- if (y[i]= boong) AND (y[i-1]= nuoc)
- AND (x[i]= nuoc) then d:=d+1;
-1 1 0 0 0 0 0 0 0
-1 1 0 0 1 1 0 0 1
-5 tàu
-A 0 0 0 0 0 B
-0 1 1 1 1 1
-0 1 1 1 1 1
-D 0 0 0 0 0 C
-Con tàu ABCD
+dem := 0 ;
+ for i := 1 to m + 1 do
+  for j := 1 to n + 1 do
+   if (a[i,j] = 'x') and (a[i+1,j] = '0') and (a[i,j+1] = '0') then inc(dem);
+ write(g,dem);
+end ;
+begin
+ nhap ;
+ xuli ;
+close(f);
+close(g);
+end .
