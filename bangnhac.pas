@@ -5,9 +5,6 @@ var
    a,id: array[1..MN] of integer;
    f, g: text;
    n: integer;
-{------------------------------------
-Doc du lieu tu input file vao mang a
--------------------------------------}
 procedure Doc;
 var i,k: integer;
 begin
@@ -15,18 +12,11 @@ assign(f,fn); reset(f); read(f,n);
 for i := 1 to n do read(f,a[i]);
 close(f);
 end;
-{---------------------------------
-  Khoi tri mang chi dan id
-  quan li sap tang theo chi dan
-----------------------------------}
 procedure InitID;
 var i: integer;
 begin
 for i := 1 to n do id[i] :=  i;
 end;
-{---------------------------------
-     Sap tang theo chi dan
-----------------------------------}
 procedure IDQuickSort(d,c: integer);
 var i, j, m, x: integer;
 begin
@@ -48,9 +38,6 @@ end;
 if d < j then IDQuickSort(d,j);
 if i < c then IDQuickSort(i,c);
 end;
-{-------------------------------
-  Ghi ket qua vao output file
---------------------------------}
 procedure Ghi;
 var i, t, tt: longint;
 begin
@@ -61,7 +48,7 @@ for i :=  1 to n do
 begin
  t :=  t + a[id[i]];
  tt :=  tt + t;
-  writeln(g,id[i],BL,t);
+  writeln(g,id[i],' ',t);
 end;
 writeln(g,tt); close(g);
 end;
