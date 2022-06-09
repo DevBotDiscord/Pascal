@@ -20,25 +20,9 @@ begin
 	if n mod i=0 then exit(false);
 	exit(True);
 end;
-procedure xuli;
-var i,j,d:longint;
-	ok:boolean;
-begin 
-	d:=0;
-	ok:=false;
-	for i:=1 to n do 
-	if prime(a[i]) then begin 
-	ok:= true;
-	inc(d);
-	b[d]:=a[i];
-	end;
-	if ok=true then begin for i:=1 to d do 
-							write(g,b[i],' '); end
-	else writeln(g,'0');
+function snt(i,j:longint):boolean;
+var k:longint;
+begin
+	for k:=i to j do 
+	if  
 end;
-begin 
-	nhap;
-	xuli;
-	close(f);
-	close(g);
-end.
