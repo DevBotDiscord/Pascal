@@ -21,7 +21,7 @@ begin
 	exit(True);
 end;
 procedure xuli;
-var i,j,d:longint;
+var i,d:longint;
 	ok:boolean;
 begin 
 	d:=0;
