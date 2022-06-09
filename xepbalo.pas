@@ -64,12 +64,12 @@ assign(g,gn);  rewrite(g);
 for i := 1 to n do writeln(g,a[i]);
 writeln(g,tt); close(g);
 end;
-procedure xuli;
-var
-begin 
-for i := 1 to n do id[i] := i;
+// procedure xuli;
+// var
+// begin 
+// for i := 1 to n do id[i] := i;
 
-end;
+// end;
 BEGIN
 Doc; InitID; IDQuickSort(1,n);
 XepBaLo; Ghi;
