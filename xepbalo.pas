@@ -1,5 +1,5 @@
 const
-  fn = 'BaLo.inp';      gn = 'BaLo.out';
+	fi = 'BaLo.inp';      fo = 'BaLo.out';
 var
 	a,id: array[1..200] of integer;
 	gdv: array[1..200] of integer;
@@ -9,9 +9,10 @@ var
 procedure Doc;
 var i,k: integer;
 begin
-assign(f,fn); reset(f); readln(f,n,m);
-for i :=  1 to n do read(f,a[i],gdv[i]);
-close(f);
+	assign(f,fi);reset(f);
+	assign(g,fo);rewrite(g);
+	readln(f,n,m);
+	for i:=1 to n do read(f,a[i],gdv[i]);
 end;
 procedure InitID;
 var i: integer;
@@ -22,19 +23,19 @@ end;
 procedure IDQuickSort(d,c: integer);
 var i, j, k, x: integer;
 begin
-i := d; j := c;
-x := gdv[id[(i+j) div 2]]; 
-while i <= j do
-begin
-while gdv[id[i]] > x do inc(i);
-while gdv[id[j]] < x do dec(j);
-if i <= j then
+	i := d; j := c;
+	x := gdv[id[(i+j) div 2]]; 
+	while i <= j do
 	begin
-		  k := id[i];
-		  id[i] := id[j];
-		  id[j] := k;
-		  inc(i); dec(j);
-	end;
+	while gdv[id[i]] > x do inc(i);
+	while gdv[id[j]] < x do dec(j);
+	if i <= j then
+		begin
+				k := id[i];
+				id[i] := id[j];
+				id[j] := k;
+				inc(i); dec(j);
+		end;
 end;
 if d < j then IDQuickSort(d,j);
 if i < c then IDQuickSort(i,c);
