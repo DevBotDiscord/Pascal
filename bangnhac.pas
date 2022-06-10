@@ -26,7 +26,7 @@ begin
 		if a[i] > a[j] then
 		 begin
 		  c := a[i] ;
-		  a[i] := a[j] ;
+		  a[i] := a[j];
 		  a[j] := c ;
 		  c := b[j] ;
 		  b[i] := b[j] ;
