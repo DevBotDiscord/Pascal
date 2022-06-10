@@ -36,9 +36,9 @@ begin
 				id[j] := k;
 				inc(i); dec(j);
 		end;
-end;
-if d < j then IDQuickSort(d,j);
-if i < c then IDQuickSort(i,c);
+	end;
+	if d < j then IDQuickSort(d,j);
+	if i < c then IDQuickSort(i,c);
 end;
 procedure XepBaLo;
 var i: integer;
@@ -69,7 +69,20 @@ end;
 // var
 // begin 
 // for i := 1 to n do id[i] := i;
-
+// tt := 0; 
+// t := m; 
+// for i :=1 to n do
+// if t >= a[id[i]] then
+// begin
+// 	t := t-a[id[i]];
+// 	tt :=  tt + (a[id[i]]*gdv[id[i]]);
+// end
+// else
+// begin
+// 	tt :=  tt+(t*gdv[id[i]]); {lay vua du }
+// 	a[id[i]] :=  t; 
+// 	t := 0;
+// end;
 // end;
 BEGIN
 Doc; InitID; IDQuickSort(1,n);

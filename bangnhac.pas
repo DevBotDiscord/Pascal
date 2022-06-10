@@ -1,57 +1,48 @@
-const
-  MN = 200; BL = #32; {dau cach}
-  fn = 'bangnhac.inp'; gn = 'bangnhac.out';
-var
-   a,id: array[1..MN] of integer;
-   f, g: text;
-   n: integer;
-procedure Doc;
-var i,k: integer;
+const fi ='bangnhac.inp' ;
+		fo ='bangnhac.out' ;
+var a , b : array[1..100] of longint ;
+	 f, g : text ;
+	 n : longint ;
+procedure nhap ;
+var i : longint ;
 begin
-assign(f,fn); reset(f); read(f,n);
-for i := 1 to n do read(f,a[i]);
+	 assign(f,fi) ;
+	 reset(f);
+	 assign(g,fo);
+	 rewrite(g);
+	 readln(f,n);
+	 for i := 1 to n do
+	  read(f,a[i]);
+end ;
+procedure xuli ;
+var i , j , c,p, tp : longint ;
+begin
+	p := 0 ;
+	tp := 0 ;
+	 for i := 1 to n do
+	  b[i] := i ;
+	 for i := 1 to n - 1 do
+	  for j := i + 1 to n do
+		if a[i] > a[j] then
+		 begin
+		  c := a[i] ;
+		  a[i] := a[j] ;
+		  a[j] := c ;
+		  c := b[j] ;
+		  b[i] := b[j] ;
+		  b[j] := c ;
+		 end ;
+	 for i := 1 to n do
+	  begin
+		p := p + a[i] ;
+		writeln(g,b[i],' ',p) ;
+		tp := tp + p ;
+	  end  ;
+	 write(g,tp);
+end ;
+begin ;
+ input ;
+ output ;
 close(f);
-end;
-procedure InitID;
-var i: integer;
-begin
-for i := 1 to n do id[i] :=  i;
-end;
-procedure IDQuickSort(d,c: integer);
-var i, j, m, x: integer;
-begin
-i :=  d;
-j :=  c;
-m :=  a[id[(i+j) div 2]]; {phan tu giua}
-while i <= j do
-begin
-  while a[id[i]] < m do inc(i);
-  while a[id[j]] > m do dec(j);
-  if i <= j then
-   begin
-    x :=  id[i];
-    id[i] :=  id[j];
-    id[j] :=  x;
-    inc(i); dec(j);
-end;
-end;
-if d < j then IDQuickSort(d,j);
-if i < c then IDQuickSort(i,c);
-end;
-procedure Ghi;
-var i, t, tt: longint;
-begin
-assign(g,gn); rewrite(g);
-t :=  0; {thoi gian tim va phat 1 bai} 
-tt :=  0; {tong thoi gian cho n bai}
-for i :=  1 to n do
-begin
- t :=  t + a[id[i]];
- tt :=  tt + t;
-  writeln(g,id[i],' ',t);
-end;
-writeln(g,tt); close(g);
-end;
-BEGIN
-Doc; InitID; IDQuickSort(1,n); Ghi;
-END.
+close(g);
+end .
