@@ -11,7 +11,7 @@ begin
 	 	assign(g,fo);
 	 		rewrite(g);
 	 	readln(f,n);
-	 for i := 1 to n do
+	 for i:=1 to n do
 	  	read(f,a[i]);
 end;
 procedure xuli;
