@@ -6,11 +6,9 @@ var f,g:text ;
 procedure input;
 var i:longint;
 begin
-	 assign(f,fi);
-	 reset(f);
-	 assign(g,fo);
-	 rewrite(g);
-	 readln(f,n);
+	assign(f,fi);reset(f);
+	assign(g,fo);rewrite(g);
+	readln(f,n);
  for i := 1 to n do
 	readln(f,a[i],b[i]);
 end ;
