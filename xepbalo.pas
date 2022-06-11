@@ -1,90 +1,63 @@
-const
-	fi = 'BaLo.inp';      fo = 'BaLo.out';
-var
-	a,id: array[1..200] of integer;
-	gdv: array[1..200] of integer;
-	f, g: text;
-	n,m: integer;
-	t,tt: integer;
-procedure Doc;
-var i,k: integer;
+const fi='balo.inp';
+      fo='balo.out';
+var f,g:text;
+    d,v,e:array [1..100] of longint;
+    n,m:longint;
+procedure input;
+var i:longint;
 begin
-	assign(f,fi);reset(f);
-	assign(g,fo);rewrite(g);
-	readln(f,n,m);
-	for i:=1 to n do read(f,a[i],gdv[i]);
+ assign(f,fi);
+ reset(f);
+ assign(g,fo);
+ rewrite(g);
+ readln(f,n,m);
+ for i:=1 to n do
+   readln(f,d[i],v[i]);
 end;
-procedure InitID;
-var i: integer;
+procedure output ;
+var b:array [1..100] of longint;
+    i , j ,c , tong ,dem :longint;
 begin
-for i := 1 to n do id[i] := i;
+ for i:=1 to n do
+  b[i]:=i;
+ for i:=1 to n-1 do
+  for j:=i+1 to n do
+   if v[i]<v[j] then
+    begin
+     c := v[i];
+     v[i] := v[j];
+     v[j] := c;
+     c := d[i];
+     d[i] := d[j];
+     d[j] := c;
+     c := b[i];
+     b[i] := b[j];
+     b[j] := c;
+    end;
+tong := 0;
+dem := 0;
+ for i:=1 to n do
+  begin
+   if d[i]<=m then
+    begin
+     tong := tong + d[i] * v[i];
+     m:=m-d[i];
+     e[b[i]]:=d[i];
+     end
+      else
+       begin
+        tong := tong + m * v[i];
+        e[b[i]] := m;
+        m := 0;
+       end;
+    end;
+ for i:=1 to n do
+  writeln(g,e[i]);
+ writeln(g,tong);
 end;
-
-procedure IDQuickSort(d,c: integer);
-var i, j, k, x: integer;
 begin
-	i := d; j := c;
-	x := gdv[id[(i+j) div 2]]; 
-	while i <= j do
-	begin
-	while gdv[id[i]] > x do inc(i);
-	while gdv[id[j]] < x do dec(j);
-	if i <= j then
-		begin
-				k := id[i];
-				id[i] := id[j];
-				id[j] := k;
-				inc(i); dec(j);
-		end;
-	end;
-	if d < j then IDQuickSort(d,j);
-	if i < c then IDQuickSort(i,c);
-end;
-procedure XepBaLo;
-var i: integer;
-begin
-tt := 0; 
-t := m; 
-for i :=1 to n do
-if t >= a[id[i]] then
-begin
-	t := t-a[id[i]];
-	tt :=  tt + (a[id[i]]*gdv[id[i]]);
-end
-else
-begin
-	tt :=  tt+(t*gdv[id[i]]); {lay vua du }
-	a[id[i]] :=  t; {chinh lai vat cuoi }
-	t := 0;
-end;
-end;
-procedure Ghi;
-var i: integer;
-begin
-assign(g,gn);  rewrite(g);
-for i := 1 to n do writeln(g,a[i]);
-writeln(g,tt); close(g);
-end;
-// procedure xuli;
-// var
-// begin 
-// for i := 1 to n do id[i] := i;
-// tt := 0; 
-// t := m; 
-// for i :=1 to n do
-// if t >= a[id[i]] then
-// begin
-// 	t := t-a[id[i]];
-// 	tt :=  tt + (a[id[i]]*gdv[id[i]]);
-// end
-// else
-// begin
-// 	tt :=  tt+(t*gdv[id[i]]); {lay vua du }
-// 	a[id[i]] :=  t; 
-// 	t := 0;
-// end;
-// end;
-BEGIN
-Doc; InitID; IDQuickSort(1,n);
-XepBaLo; Ghi;
-END.
+ input ;
+ output ;
+close(f);
+close(g);
+end.
