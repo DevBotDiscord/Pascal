@@ -1,44 +1,48 @@
-program DoanGoi1;
-uses crt;
-const
-  mn = 1001; bl = #32; nl = #13#10;
-  fn = 'doan.inp'; gn = 'doan.out';
-type
-  KieuDoan = record a,b: integer; end;
-  md1 = array[0..mn] of KieuDoan;
-  mi1 = array[0..mn] of integer;
-var n,m: integer; { n – số lượng đoạn, m – số đoạn được chọn }
-    d: md1; { các đoạn d[1..n]}
-    f,g: text;
-    c: mi1; { c[i] = số lượng max các đoạn gối nhau đến i }
-procedure Doc; 
-procedure Qsort(t,p: integer);
-procedure XuLi;
-var i,j: integer;
+const fi = 'doangoi.inp' ;
+      fo = 'doangoi.out' ;
+var f ,g : text ;
+    n : longint ;
+    a,b,c : array[1..1000] of longint ;
+procedure input ;
+var i : longint ;
 begin
-  c[1] := 1;
-  for i := 2 to n do { Tính c[i] }
+ assign(f,fi);
+ reset(f);
+ assign(g,fo);
+ rewrite(g);
+ readln(f,n);
+ for i := 1 to n do
+  readln(f,a[i],b[i]);
+end ;
+procedure output ;
+var i , j , t , k : longint ;
+begin
+k := -maxlongint ;
+ for i := 1 to n - 1 do
+  for j := i + 1 to n do
+   if b[i] > b[j] then
     begin
-      c[i] := 0;
-        for j := i-1 downto 1 do
-          begin
-            if (d[j].b < d[i].a)  { doan j khong noi voi i }
-            then break;
-            if (d[j].b = d[i].a) then { j noi voi i }
-               if (c[j] > c[i]) then c[i] := c[j];
-          end;
-      c[i] := c[i] + 1;
-    end;
-end;
-procedure Ket; { Tim c max va hien thi ket qua }
-var i,imax: integer;
+     t := b[i] ;
+     b[i] := b[j] ;
+     b[j] := t ;
+     t := a[i] ;
+     a[i] := a[j] ;
+     a[j] := t ;
+    end ;
+ for i := 1 to n do
+  begin
+   c[i] := 1 ;
+   for j := 1 to i - 1 do
+    if a[i] = b[j] then
+     if c[i] < c[j] + 1 then c[i] := c[j] + 1 ;
+  end ;
+ for i := 1 to n do
+  if c[i] > k then k := c[i] ;
+ write(g,k);
+end ;
 begin
-  assign(g,gn); rewrite(g);
-  imax := 1;
-  for i := 2 to n do
-    if (c[imax] < c[i]) then imax := i;
-  writeln(g,c[imax]); close(g);
-end;
-BEGIN
-  Doc; Qsort(1,n); XuLi;  Ket;
-END.
+ input ;
+ output ;
+close(f);
+close(g);
+end .
