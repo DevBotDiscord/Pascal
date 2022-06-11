@@ -1,4 +1,4 @@
-const fi = 'doangoi.inp';
+const fi = 'doangoi.inp';	
 		fo = 'doangoi.out';
 var f,g:text;
 		n:longint;
