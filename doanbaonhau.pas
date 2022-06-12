@@ -1,6 +1,6 @@
 const fi='doanbaonhau.inp';
 	  fo='doanbaonhau.out';
-var a,b,c: array [1..100] of longint;
+var a,b,c:array [1..100] of longint;
 	f,g:text;
 	n:longint;
 procedure nhap;
@@ -12,12 +12,10 @@ begin
 	for i:=1 to n do
 		readln(f,a[i],b[i]);
 end;
-
 function max(a,b:longint):longint;
 begin
 	if a>b then max:=a else max:=b;
 end;
-
 procedure tim;
 var i,j,t,maxt:longint;
 begin
