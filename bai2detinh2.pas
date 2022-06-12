@@ -14,7 +14,7 @@ begin
 		inc(k);
 		readln(f,a[k]);
 	end
-	l:=0;
+	l:=0;	
 	while not eof(f) do
 	begin
 		inc(l);
