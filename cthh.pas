@@ -9,9 +9,8 @@ assign(g,fo);rewrite(g);
 readln(F,s);
 end;
 
-
 procedure tima;
-var   i,j,d:longint;
+var i,j,d:longint;
 begin
 d:=0;
 for i:=1 to length(S) do
@@ -38,7 +37,7 @@ if (s[length(s)] in ['A'.. 'Z']) or (s[length(s)] in ['a'.. 'z']) then s:=s+'1';
 if (s[i] in ['A'..'Z']) and (s[i+1] in ['A'..'Z']) then insert('1',s,i+1);
 if (s[i] in ['a'..'z']) and (s[i+1] in ['A'..'Z']) then insert('1',s,i+1);
 end;
-writeln(g,s);
+//writeln(g,s);
 for i:=1 to length(s) do
  if ((s[i] in ['1'..'9']) and (s[i+1] in ['A'..'Z']) and (s[i-1] in ['A'..'Z']))
  or (i=length(s))

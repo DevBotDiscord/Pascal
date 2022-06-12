@@ -48,7 +48,7 @@ begin
         if t[i].ten = t[j].ten then
         if t[i].ho > t[j].ho then swap
     end;
-end;
+    end;
 begin
     input;
     sapxep;
