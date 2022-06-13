@@ -5,10 +5,8 @@ var f,g:text;
     l:array[0..100,0..100] of longint;
 procedure nhap;
 begin
-    assign(f,fi);
-    reset(f);
-    assign(g,fo);
-    rewrite(G);
+    assign(f,fi); reset(f);
+    assign(g,fo); rewrite(G);
     readln(f,s);
     readln(f,s1);
 end;
