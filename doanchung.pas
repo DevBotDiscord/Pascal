@@ -1,8 +1,8 @@
 const fi='bai4.inp';
       fo='bai4.out';
 var f,g:text;
-s,s1:string;
-l:array[0..727,0..727] of longint;
+    s,s1:string;
+    l:array[0..100,0..100] of longint;
 procedure nhap;
 begin
     assign(f,fi);
