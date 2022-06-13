@@ -37,6 +37,6 @@ end;
 begin
     nhap;
     kiemtra;
-    close(F);
-    close(G);
+    close(f);
+    close(g);
 end.
