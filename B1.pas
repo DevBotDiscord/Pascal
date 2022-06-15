@@ -25,7 +25,7 @@ begin
 		uoc:=a;
 end;
 procedure tim;
-var i: integer; kt: boolean;
+var i:integer; kt:boolean;
 begin
 	kt:=false; 
 	for i:=a to b do
