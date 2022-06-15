@@ -9,7 +9,6 @@ begin
 	assign(o1,fo); rewrite(o1);
 	readln(i1,n,k);
 end;
-
 procedure caua;
 var d,t:longint;
 begin
@@ -22,8 +21,6 @@ begin
 	end;
 writeln(o1,d);
 end;
-
-
 procedure caub;
 var i,s,du,t:longint;
 begin
@@ -37,7 +34,6 @@ begin
 	end;
 	writeln(o1,s);
 end;
-
 procedure cauc;
 var a:string;
 begin
