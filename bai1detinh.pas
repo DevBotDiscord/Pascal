@@ -17,8 +17,8 @@ begin
 	t:=n;
 	while t<>0 do 
 	begin
-	t:=t div 10;
-	d:=d+1;
+		t:=t div 10;
+		d:=d+1;
 	end;
 writeln(o1,d);
 end;
