@@ -8,7 +8,8 @@ begin
 	readln(f,s);
 end;
 procedure tim;
-var d,j,i:longint;     t:char;
+var d,j,i:longint;
+	t:char;
 begin
 	d:=1;
 	for i:=1 to length(s)-1 do
