@@ -6,7 +6,7 @@ begin
 assign(f,fi); reset(f);
 assign(g,fo); rewrite(g);
 readln(f,a,b);
- end;
+end;
 function dao(n: integer): integer; var d,du: integer;
 begin
 d:=0;
