@@ -1,5 +1,5 @@
 const fi='bail.inp';
-fo='bail.out';
+	  fo='bail.out';
 var f,g: text; a, b:integer;
 procedure nhap;
 begin
